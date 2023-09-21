@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "PP Neune Montreal Medium";
+  src: url("./font/PPNeueMontreal-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "PP Neune Montreal Medium", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fcfcfc;
+}
+
+code {
+  font-family: "PP Neune Montreal Medium", monospace;
+}
