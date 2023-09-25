@@ -13,6 +13,11 @@ import {
   ReadMore,
   FooterTextWrap,
   InfoContainer,
+  Footer1fr,
+  Footer2fr,
+  FooterTextLeft,
+  FooterTextLeftFirstChild,
+  FooterTextLeftSecondChild,
 } from "./styled";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
@@ -39,21 +44,23 @@ const FooterComponent = forwardRef((props, ref) => {
   const redirectToAkanza = () => {
     window.open('https://akanza.pl/', '_blank');
   }; 
-
+  
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Contact ref={ref}>Kontakt</Contact>
         <QuestionsContainer>
-          <QuestionsTitle>Masz pytania?</QuestionsTitle> 
-         
-          <Info>Safeko house sp. z o.o. <br></br>ul. Mackiewicza 21/31, 20-865 Lublin</Info>
-           <InfoContainer><InfoInteractive onClick={handleEmailClick}>
-            kontakt@safekohouse.com
-          </InfoInteractive>
-          <InfoInteractive onClick={handlePhoneNumberClick}>{PhoneNumber}</InfoInteractive></InfoContainer>
-          <Info2>NIP: 712 338 48 46 <br></br> KRS: 0000779078 </Info2>
-          
+          <Footer1fr>
+            <Contact ref={ref}>Kontakt</Contact>
+          </Footer1fr>
+          <Footer2fr>
+            <QuestionsTitle>Masz pytania?</QuestionsTitle> 
+            <Info>Safeko house sp. z o.o. <br></br>ul. Mackiewicza 21/31, 20-865 Lublin</Info>
+            <InfoContainer><InfoInteractive onClick={handleEmailClick}>
+              kontakt@safekohouse.com
+            </InfoInteractive>
+            <InfoInteractive onClick={handlePhoneNumberClick}>{PhoneNumber}</InfoInteractive></InfoContainer>
+            <Info2>NIP: 712 338 48 46 <br></br> KRS: 0000779078 </Info2>
+          </Footer2fr>
         </QuestionsContainer>
         <Maps>
           <LoadScript
@@ -68,16 +75,24 @@ const FooterComponent = forwardRef((props, ref) => {
             </GoogleMap>
           </LoadScript>
         </Maps>
-        <FooterTextWrap>
-        <FooterText>© Safeko house</FooterText>
-        <FooterText isAkanza onClick={redirectToAkanza}>realizacja: akanza.pl </FooterText>
-        </FooterTextWrap>
-        <FooterText isClickable onClick={redirectToPrivacyPolitics}>Polityka prywatności</FooterText>
+        <FooterTextLeft>
+          <FooterTextLeftFirstChild>
+            <FooterTextWrap>
+              <FooterText>© Safeko house</FooterText>
+              <FooterText isAkanza onClick={redirectToAkanza}>realizacja: akanza.pl </FooterText>
+            </FooterTextWrap>
+          </FooterTextLeftFirstChild>
+          <FooterTextLeftSecondChild>
+            {/* <FooterText isClickable onClick={redirectToPrivacyPolitics}>Polityka prywatności</FooterText> */}
+            <FooterText >Polityka prywatności</FooterText>
+          </FooterTextLeftSecondChild>
+        </FooterTextLeft>
         <FooterText isLast>
           Stosujemy pliki cookies. Korzystanie ze strony bez zmiany ustawień
           przeglądarki oznacza, że pliki cookies będą zamieszczane w Twoim
           urządzeniu. 
-        <ReadMore onClick={redirectToCookies}>Czytaj więcej</ReadMore>
+        {/* <ReadMore onClick={redirectToCookies}>Czytaj więcej</ReadMore> */}
+        <ReadMore > Czytaj więcej</ReadMore>
         </FooterText>
       </FooterWrapper>
     </FooterContainer>

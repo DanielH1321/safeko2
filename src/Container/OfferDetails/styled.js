@@ -3,7 +3,7 @@ import SecondaryPicture from "../../images/Photo_02.jpg";
 import ThirdPicture from "../../images/Photo_03.png";
 import ThirdPictureSmall from "../../images/Photo_03_small.png";
 import FourthPicture from "../../images/Photo_04.png";
-import FourthPictureSmall from "../../images/Photo_04_small.png"; 
+import FourthPictureSmall from "../../images/Photo_04_small.png";
 import FifthPicture from "../../images/Photo_05.png";
 import FifthPictureSmall from "../../images/Photo_05_small.png";
 import { ReactComponent as VectorRight } from "../../images/VectorRight2.svg";
@@ -19,7 +19,9 @@ export const DetailsWrapper = styled.section`
   @media (max-width: 750px) {
     padding-top: 0px;
   }
-
+  @media (min-width: 360px) and (max-width: 750px) {
+    justify-content: center;
+  }
 `;
 
 export const PictureWrapper = styled.div`
@@ -28,7 +30,7 @@ export const PictureWrapper = styled.div`
 `;
 
 export const PictureTwo = styled.div`
-  background: url(${SecondaryPicture}) ;
+  background: url(${SecondaryPicture});
   max-width: 1096px;
   width: 100%;
   max-height: 615px;
@@ -41,6 +43,26 @@ export const PictureTwo = styled.div`
     width: 320px;
     height: 200px;
   }
+  @media (min-width: 361px) and (max-width: 750px) {
+    // margin: 0 20px;
+    min-width: 320px;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    aspect-ratio: auto;
+  }
+  @media (min-width: 751px) and (max-width: 1100px) {
+    background-size: contain;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+    aspect-ratio: 16/9;
+  }
+`;
+export const PictureDiv = styled.div`
+  width: calc(100% - 40px);
+  }
 `;
 
 export const DetailsContainer = styled.section`
@@ -49,19 +71,30 @@ export const DetailsContainer = styled.section`
   max-width: 1092px;
   width: 100%;
   height: 100%;
+  margin-left:20px;
+  margin-right:20px;
 
   @media (max-width: 750px) {
     grid-template-columns: 1fr;
+  }
+  @media (min-width: 751px) and (max-width: 1100px) {
+    gap:15px
   }
 `;
 
 export const ColumnFirst = styled.div`
   margin: 34px 0 10px;
+  @media (min-width: 751px) and (max-width: 1100px) {
+    margin-left:20px;
+  }
 `;
 
 export const ColumnSecond = styled.div`
   margin: 211px 0 10px;
   display: flex;
+  @media (min-width: 751px) and (max-width: 1100px) {
+    margin-right:20px;
+  }
 `;
 
 export const BorderWrap = styled.div`
@@ -73,6 +106,8 @@ export const BorderWrap = styled.div`
     width: 320px;
     margin-left: 20px;
   }
+  
+
 `;
 
 export const DetailsTitle = styled.h1`
@@ -96,6 +131,7 @@ export const DetailsTitle = styled.h1`
     line-height: 30px;
     margin-top: 48px;
   }
+  
 `;
 
 export const Description = styled.p`
@@ -106,12 +142,14 @@ export const Description = styled.p`
   color: #474945;
   line-height: 24px;
   padding: 12px 0 12px;
- 
+
   @media (max-width: 750px) {
     margin-bottom: 12px;
   }
+  @media (min-width: 751px) and (max-width: 1100px) {
+    max-width:430px;
+  }
 `;
-
 
 export const Wrapper = styled.span`
   display: flex;
@@ -207,6 +245,9 @@ export const PictureFour = styled.div`
     width: 320px;
     height: 425px;
   }
+  @media (min-width: 751px) and (max-width: 1100px) {
+    margin-left:20px;
+  }
 `;
 
 export const LocalWrap = styled.div`
@@ -216,6 +257,9 @@ export const LocalWrap = styled.div`
 
   @media (max-width: 750px) {
     margin: 0;
+  }
+  @media (min-width: 751px) and (max-width: 1100px) {
+    margin-left:0px;
   }
 `;
 
@@ -259,18 +303,28 @@ export const StyledVectorRight = styled(VectorRight)`
 
 export const PictureFive = styled.div`
   max-width: 1400px;
-  width: 100%;
+  // width: 100%;
   max-height: 524px;
   height: 100%;
   margin-top: 105px;
   aspect-ratio: 1 / 2;
   background-image: url(${FifthPicture});
-
+  width: calc(100% - 40px);
   @media (max-width: 750px) {
     background-image: url(${FifthPictureSmall});
     background-repeat: no-repeat;
-    width: 340px;
+    width: 320px;
     height: 400px;
     margin-top: 60px;
+    margin-left:20px;
+  }
+  @media (min-width: 751px) and (max-width: 1100px) {
+    margin-left:20px;
+    margin-right:20px;
+    width: calc(100% - 40px);
+    // background-size:contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
+}
   }
 `;

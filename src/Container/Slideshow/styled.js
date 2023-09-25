@@ -1,8 +1,8 @@
-import styled from "styled-components"; 
-import { ReactComponent as ArrowLeft} from "../../images/VectorLeft.svg";
-import { ReactComponent as ArrowRight} from "../../images/VectorRight.svg"; 
+import styled from "styled-components";
+import { ReactComponent as ArrowLeft } from "../../images/VectorLeft.svg";
+import { ReactComponent as ArrowRight } from "../../images/VectorRight.svg";
 
-export const StyledSlideshow = styled.div` 
+export const StyledSlideshow = styled.div`
   display: flex;
   justify-content: center;
   max-width: 1400px;
@@ -14,7 +14,7 @@ export const StyledSlideshow = styled.div`
   @media (max-width: 1440px) {
     // margin: 0 20px;
     width: calc(100% - 20px);
-  }  
+  }
 
   @media (max-width: 750px) {
     min-width: 340px;
@@ -24,16 +24,16 @@ export const StyledSlideshow = styled.div`
 `;
 
 export const MainPictureContainer = styled.div`
-top: 70px;
+  top: 70px;
   max-width: 1400px;
   width: 100%;
   min-height: 500px;
   max-height: 700px;
-  height: 100%; 
+  height: 100%;
   position: relative;
   aspect-ratio: 2 / 1;
-  background-image: url(${props => props.imageUrl});
-  background-size: cover; 
+  background-image: url(${(props) => props.imageUrl});
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   transition: background-image 0.6s linear;
@@ -55,7 +55,7 @@ export const Pagination = styled.span`
   gap: 30px;
 
   @media (max-width: 750px) {
-    min-width: 340px; 
+    min-width: 340px;
     height: 60px;
     gap: 0;
     justify-content: space-between;
@@ -82,7 +82,7 @@ export const PaginationButton = styled.button`
   background-color: inherit;
   border: none;
   background-repeat: no-repeat;
-  background-position: center;  
+  background-position: center;
 
   &:hover {
     cursor: pointer;
@@ -90,13 +90,13 @@ export const PaginationButton = styled.button`
   }
 
   &:disabled {
-    cursor: default; 
-  } 
+    cursor: default;
+  }
 
   @media (max-width: 750px) {
     height: 60px;
     width: 60px;
-  } 
+  }
 `;
 
 export const PaginationCounter = styled.p`
@@ -114,29 +114,28 @@ export const PaginationCounter = styled.p`
 `;
 
 export const StyledArrowLeft = styled(ArrowLeft)`
-margin: auto; 
-fill: ${({ disabled }) => (disabled ? '#71746e' : '#FAFAFA')};
+  margin: auto;
+  fill: ${({ disabled }) => (disabled ? "#71746e" : "#FAFAFA")};
 
-@media (max-width: 750px) {
-     width: 18px;
-     height: 14px;
-    } 
+  @media (max-width: 750px) {
+    width: 18px;
+    height: 14px;
+  }
 `;
- 
 
 export const StyledArrowRight = styled(ArrowRight)`
-margin: auto; 
-fill: ${({ disabled }) => (disabled ? '#71746e' : '#FAFAFA')};
+  margin: auto;
+  fill: ${({ disabled }) => (disabled ? "#71746e" : "#FAFAFA")};
 
-@media (max-width: 750px) {
-     width: 18px;
-     height: 14px;
-    } 
+  @media (max-width: 750px) {
+    width: 18px;
+    height: 14px;
+  }
 `;
- 
+
 export const Loading = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-font-size: 30px;
+  font-size: 30px;
 `;

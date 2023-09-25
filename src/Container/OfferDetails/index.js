@@ -19,10 +19,11 @@ import {
   StyledVectorRight,
   Wrapper,
   Wrapper2,
+  PictureDiv,
 } from "./styled";
 
 const OfferDetails = ({ scrollToRef }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth); 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,13 +37,15 @@ const OfferDetails = ({ scrollToRef }) => {
   }, []);
 
   const handleClick = (refName) => {
-    scrollToRef(refName); 
+    scrollToRef(refName);
   };
 
   if (windowWidth <= 750) {
     return (
       <DetailsWrapper>
-        <PictureTwo />
+        <PictureDiv>
+          <PictureTwo />
+        </PictureDiv>
         <DetailsContainer>
           <BorderWrap>
             <DetailsTitle>Nowoczesne domy</DetailsTitle>
@@ -54,14 +57,18 @@ const OfferDetails = ({ scrollToRef }) => {
               <Counter>02</Counter>
               <Details>500 m² działka</Details>
             </Wrapper>
-            <PictureThree />
+            <PictureDiv>
+              <PictureThree />
+            </PictureDiv>
             <StyledP>200 m²</StyledP>
             <Description>
-            Budujemy według najwyższych standardów, korzystając z wiedzy, doświadczenia i wizji sprawdzonych architektów oraz niezawodnego działu realizacji inwestycji.
+              Budujemy według najwyższych standardów, korzystając z wiedzy,
+              doświadczenia i wizji sprawdzonych architektów oraz niezawodnego
+              działu realizacji inwestycji.
             </Description>
-            <Wrapper2 isFirst >
+            <Wrapper2 isFirst>
               <Counter>01</Counter>
-              <Details >
+              <Details>
                 Technologie OZE optymalizujące koszty użytkowania 
               </Details>
             </Wrapper2>
@@ -99,7 +106,7 @@ const OfferDetails = ({ scrollToRef }) => {
                 </Details>
               </Wrapper2>
               <LocalButton onClick={() => handleClick("contact")}>
-                Zobacz lokalizację 
+                Zobacz lokalizację
                 <StyledVectorRight />
               </LocalButton>
             </LocalWrap>
@@ -108,7 +115,7 @@ const OfferDetails = ({ scrollToRef }) => {
         <PictureFive />
       </DetailsWrapper>
     );
-  };
+  }
 
   return (
     <DetailsWrapper>
@@ -152,7 +159,7 @@ const OfferDetails = ({ scrollToRef }) => {
                 </Details>
               </Wrapper>
               <LocalButton onClick={() => handleClick("contact")}>
-                Zobacz lokalizację 
+                Zobacz lokalizację
                 <StyledVectorRight />
               </LocalButton>
             </LocalWrap>
@@ -161,7 +168,9 @@ const OfferDetails = ({ scrollToRef }) => {
         <ColumnSecond>
           <BorderWrap>
             <Description>
-            Budujemy według najwyższych standardów, korzystając z wiedzy, doświadczenia i wizji sprawdzonych architektów oraz niezawodnego działu realizacji inwestycji.
+              Budujemy według najwyższych standardów, korzystając z wiedzy,
+              doświadczenia i wizji sprawdzonych architektów oraz niezawodnego
+              działu realizacji inwestycji.
             </Description>
             <Wrapper isFirst>
               <Counter>01</Counter>

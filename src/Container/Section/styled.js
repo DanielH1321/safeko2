@@ -7,8 +7,13 @@ export const StyledSection = styled.section`
   padding-top: 132px;
 
   @media (max-width: 750px) {
-  padding-top: 20px;
-  min-height: 312px;
+    padding-top: 20px;
+    min-height: 312px;
+  }
+  @media (min-width: 361px) and (max-width: 750px) {
+    margin: 0;
+    justify-content: center;
+    display: grid;
   }
 `;
 
@@ -19,7 +24,7 @@ export const OfferContainer = styled.div`
   grid-template-columns: 5fr 7fr;
 
   @media (max-width: 750px) {
- grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -30,7 +35,6 @@ export const Offer = styled.h1`
   color: #181818;
   font-weight: 500;
 
-  
   @media (max-width: 750px) {
     padding: 8px 20px;
     margin-top: 30px;
@@ -43,9 +47,9 @@ export const ItemFirst = styled.div`
   max-width: 539px;
   width: 100%;
 
-  @media (max-width: 750px) {
- margin: 0 auto;
-}
+  //   @media (max-width: 750px) {
+  //  margin: 0 auto;
+  // }
 `;
 
 export const TitleFirst = styled.h2`
@@ -56,11 +60,11 @@ export const TitleFirst = styled.h2`
   margin-bottom: 36px;
 
   @media (max-width: 750px) {
- font-size: 24px;
- line-height: 30px;
- margin-left: 20px;
- margin-bottom: 24px;
-}
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-bottom: 24px;
+  }
 `;
 
 export const DescFirst = styled.p`
@@ -69,9 +73,9 @@ export const DescFirst = styled.p`
   color: #474945;
 
   @media (max-width: 750px) {
- font-size: 16px;
- line-height: 23px;
- width: 320px;
- margin-left: 20px;
-}
+    font-size: 16px;
+    line-height: 23px;
+    width: 320px;
+    margin-left: 20px;
+  }
 `;

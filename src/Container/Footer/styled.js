@@ -15,8 +15,10 @@ export const FooterContainer = styled.div`
 
 export const FooterWrapper = styled.div`
   display: grid;
-  grid-template-columns: 2fr 6fr 9fr;
+  grid-template-columns: 1fr 1fr;
+  @media(min-width:750px) and (max-width:){
 
+  }
   @media (max-width: 750px) {
     grid-template-columns: 1fr;
   }
@@ -41,11 +43,12 @@ export const QuestionsContainer = styled.div`
   line-height: 24px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  
 
   @media (max-width: 750px) {
     align-items: flex-start;
     padding-left: 20px;
+    flex-direction: column;
   }
 `;
 
@@ -54,8 +57,8 @@ export const QuestionsTitle = styled.h1`
   color: #181818;
   font-size: 36px;
   line-height: 39px;
-  margin: 84px 233px 36px 179px;
-  width: 233px;
+  margin: 84px 0 36px 0;
+  width: 284px;
 
   @media (max-width: 750px) {
     margin: 0;
@@ -118,6 +121,7 @@ export const Maps = styled.div`
 
 export const FooterTextWrap = styled.div` 
 height: 86px;
+// width:50%;
 `;
 
 export const FooterText = styled.p`
@@ -129,7 +133,7 @@ export const FooterText = styled.p`
   letter-spacing: -0.084px;
   margin: 0;
   padding-top: 20px;
-  border-top: 1px solid #71746e;
+  // border-top: 1px solid #71746e;
   position: relative;
 
   @media (max-width: 750px) {
@@ -157,16 +161,18 @@ export const FooterText = styled.p`
   ${({ isLast }) =>
     isLast &&
     css`
-      max-width: 536px;
+      // max-width: 536px;
+      display:flow;
       padding-right: 80px;
       flex-direction: column;
-      padding-top: 0;
-
+      padding-top: 20px;
+      border-top: 1px solid #71746e;
       @media (max-width: 1440px) {
         padding-right: 65px;
       }
 
       @media (max-width: 750px) {
+        display:flex;
         padding: 24px 0 0 20px;
         width: 300px;
         margin-bottom: 35px;
@@ -175,25 +181,56 @@ export const FooterText = styled.p`
 `;
 
 export const ReadMore = styled.a`
-  border: none;
-  position: absolute;
-  top: 60%;
-  transform: translateY(-50%);
-  right: 29%;
-  transition: color 0.2s ease;
+  // border: none;
+  // position: absolute;
+  // top: 60%;
+  // transform: translateY(-38%);
+  // right: 29%;
+  // transition: color 0.2s ease;
+  
 
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    color: #6a6a6a;
-  }
+  // &:hover {
+  //   cursor: pointer;
+  //   text-decoration: underline;
+  //   color: #6a6a6a;
+  // }
 
-  @media (min-width: 1441px) {
-    right: 31%;
-  }
+  // @media (min-width: 1441px) {
+  //   right: 31%;
+  // }
 
+  // @media (max-width: 750px) {
+  //   top: 210%;
+  //   right: 69%;
+  // }
+`;
+export const Footer1fr = styled.div`
+
+`;
+export const Footer2fr = styled.div`
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
   @media (max-width: 750px) {
-    top: 210%;
-    right: 69%;
+    padding-left: 20px;
+    align-items: flex-start;
+    width: 80%;
   }
+  
+`;
+export const FooterTextLeft = styled.div`
+border-top: 1px solid #71746e;
+display: flex;
+@media (max-width: 750px) {
+  flex-direction: column;
+}
+`;
+export const FooterTextLeftFirstChild = styled.div`
+width:180px;
+`;
+export const FooterTextLeftSecondChild = styled.div`
+width:50%;
+
 `;
